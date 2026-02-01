@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Traffic - Elite AI Signals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #10b981;
+            --bg-deep: #000000;
+            --bg-card: #0b0e11;
+            --border-muted: #2d3139;
+            --text-main: #e6e8ea;
+            --text-muted: #848e9c;
+            --ease-bybit: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            margin: 0;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .animate-soft-in {
+            animation: softIn 0.8s var(--ease-bybit) forwards;
+        }
+        @keyframes softIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .bt-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-muted);
+            border-radius: 4px;
+            transition: all 0.2s var(--ease-bybit);
+        }
+        .bt-card:hover {
+            border-color: var(--accent);
+            background-color: #161a1e;
+        }
+        .bt-button-primary {
+            background-color: var(--accent);
+            color: #000000;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .bt-button-primary:hover {
+            opacity: 0.9;
+        }
+        .bt-button-primary:active {
+            transform: scale(0.98);
+        }
+        .stagger-1 { animation-delay: 0.05s; }
+        .stagger-2 { animation-delay: 0.1s; }
+        .stagger-3 { animation-delay: 0.15s; }
+        .stagger-4 { animation-delay: 0.2s; }
+        
+        /* Custom scrollbar for Bybit look */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb { background: var(--border-muted); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        .tradingview-widget-copyright, iframe + div { display: none !important; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
